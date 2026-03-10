@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageTags>tax;gerador de cupom;cupom fiscal;</PackageTags>
+    <Authors>Danilo Alves da Silva</Authors>
+    <Title>CupomFiscalGenerator</Title>
+    <Description>Uma biblioteca com o intuito de gerar um cupom fiscal com as informações repassadas do prestador de serviços e/ou estabelecimento.</Description>
+    <PackageReleaseNotes>Primeira versão da biblioteca.
+Gera um cupom fiscal com as informações do estabelecimento e dos produtos adquiridos pelos clientes.</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/DaniloAlv/cupom-fiscal-generator-package</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DaniloAlv/cupom-fiscal-generator-package</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>	
+
+</Project>
