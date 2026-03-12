@@ -16,7 +16,7 @@ O objetivo desta biblioteca é simplificar a geração de cupons fiscais, oferec
 
 Instale o pacote via NuGet:
 ```bash
-  dotnet add package CupomFiscalGenerator
+dotnet add package CupomFiscalGenerator
 ```
 Ou através do Gerenciador de Pacotes NuGet.
 
@@ -28,40 +28,50 @@ Para começar a usar a biblioteca, basta registrar o serviço no container de in
 
 Adicione a seguinte linha no Startup.cs ou Program.cs da sua aplicação:
 ```c#
-  public class Startup
+public class Startup
+{
+  public void ConfigureServices(IServiceCollection services)
   {
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddCupomFiscalGenerator();
-    }
+      services.AddCupomFiscalGenerator();
   }
+}
 ```
 
 ### 2. Utilizar o serviço
 
 Após registrar o serviço, você pode injetá-lo em suas classes.
 ```c#
-  public class PedidoService
-  {      
-      private readonly ICupomFiscalGenerator _cupomGenerator;
+[Route("api/[controller]")]
+[ApiController]
+public class PedidoController : ControllerBase
+{      
+    private readonly ICupomFiscalGenerator _cupomGenerator;
 
-      public PedidoService(ICupomFiscalGenerator cupomGenerator)
-      {
-          _cupomGenerator = cupomGenerator;
-      }
+    public PedidoController(ICupomFiscalGenerator cupomGenerator)
+    {
+        _cupomGenerator = cupomGenerator;
+    }
 
-      public void GerarCupom()
-      {
-          _cupomGenerator.Generate();
-      }
-  }
+    [HttpGet]
+    public IActionResult Get()
+    {
+        //{
+        // restante do código omitido
+        //}
+
+        _cupomGenerator.BuildCupomInformation(empresa, pedido, cliente);
+        var cupomFiscal = _cupomGenerator.Generate();
+
+        return File(cupomFiscal, Application.Pdf, "cupom_fiscal.pdf");
+    }
+}
 ```
 
 ## 📖 Como Funciona
 
 A biblioteca registra internamente todos os serviços necessários quando você executa:
 ```c#
-  services.AddCupomFiscalGenerator();
+services.AddCupomFiscalGenerator();
 ```
 
 > [!NOTE]
