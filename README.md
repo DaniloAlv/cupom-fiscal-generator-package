@@ -1,17 +1,16 @@
 # Pacote Cupom Fiscal Generator
 
-### Biblioteca NÃO OFICIAL, somente de estudos, com o intuito de testes para geração de cupom fiscal com as informações do prestador de serviços e/ou estabelecimento, listando os produtos adquiridos pelo cliente.
+### Biblioteca NÃO OFICIAL, somente de estudos, com o intuito de gerar um cupom fiscal com as informações do prestador de serviços ou estabelecimento, listando os produtos adquiridos pelo cliente.
 
 Uma biblioteca .NET leve e fácil de usar para gerar cupons fiscais em sua aplicação.
 
-O objetivo desta biblioteca é simplificar a geração de cupons fiscais, oferecendo uma configuração mínima e integração perfeita com o sistema de injeção de dependência do .NET.
+O objetivo desta biblioteca é simplificar a geração de cupons fiscais, oferecendo uma configuração mínima e integração fácil.
 
 ## ✨ Funcionalidades
 
 * Integração simples com Dependency Injection do .NET
 * Configuração mínima necessária
 * Biblioteca leve e fácil de utilizar
-* Pensada para aplicações em ambiente de produção
 
 ## 📦 Instalação
 
