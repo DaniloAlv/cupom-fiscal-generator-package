@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CupomFiscalGenerator
 {
-    public static class ServiceCollectionExtensions
+    internal static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddCupomFiscalGenerator(this IServiceCollection services)
         {
