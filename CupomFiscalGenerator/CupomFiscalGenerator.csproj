@@ -8,13 +8,13 @@
     <Authors>Danilo Alves da Silva</Authors>
     <Title>CupomFiscalGenerator</Title>
     <Description>Uma biblioteca com o intuito de gerar um cupom fiscal com as informações repassadas do prestador de serviços e/ou estabelecimento.</Description>
-    <PackageReleaseNotes>Primeira versão da biblioteca.
-Gera um cupom fiscal com as informações do estabelecimento e dos produtos adquiridos pelos clientes.</PackageReleaseNotes>
+    <PackageReleaseNotes>Biblioteca apenas de estudos, capaz de gerar um cupom fiscal com informações do estabelecimento ou prestador de serviços, e listar os produtos adquiridos pelos clientes.</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/DaniloAlv/cupom-fiscal-generator-package</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DaniloAlv/cupom-fiscal-generator-package</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>CupomFiscalGenerator</PackageId>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
